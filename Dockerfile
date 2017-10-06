@@ -14,7 +14,7 @@ RUN chmod -R 777 /etc/ssh
 RUN chmod 777 /usr/sbin/sshd
 RUN chmod +s /usr/sbin/sshd
 RUN useradd -r -u 1001 -g appuser appuser
-RUN chown appuser appuser /usr/sbin/sshd
+RUN chown appuser:appuser /usr/sbin/sshd
 USER appuser
 EXPOSE 22
 
